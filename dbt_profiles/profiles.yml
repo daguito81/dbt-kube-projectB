@@ -1,24 +1,13 @@
 project_b:
-  target: dev-password
+  target: dev-sso-browser
   outputs:
     dev-sso-browser:
-      account: <account>
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
       authenticator: externalbrowser
-      database: <database>
-      role: <role>
-      schema: <schema>
+      database: "{{ env_var('SNOWFLAKE_DATABASE') }}"
+      role: "{{ env_var('SNOWFLAKE_ROLE') }}"
+      schema: "{{ env_var('SNOWFLAKE_SCHEMA') }}"
       threads: 4
       type: snowflake
-      user: <user>
-      warehouse: <warehouse>
-
-    dev-password:
-      account: <account>
-      database: <database>
-      role: <role>
-      schema: <schema>
-      threads: 4
-      type: snowflake
-      user: <user>
-      password: <password>
-      warehouse: <warehouse>
+      user: "{{ env_var('SNOWFLAKE_USER') }}"
+      warehouse: "{{ env_var('SNOWFLAKE_WAREHOUSE') }}"
