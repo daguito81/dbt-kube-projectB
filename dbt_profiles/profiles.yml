@@ -1,0 +1,24 @@
+project_b:
+  target: dev-password
+  outputs:
+    dev-sso-browser:
+      account: <account>
+      authenticator: externalbrowser
+      database: <database>
+      role: <role>
+      schema: <schema>
+      threads: 4
+      type: snowflake
+      user: <user>
+      warehouse: <warehouse>
+
+    dev-password:
+      account: <account>
+      database: <database>
+      role: <role>
+      schema: <schema>
+      threads: 4
+      type: snowflake
+      user: <user>
+      password: <password>
+      warehouse: <warehouse>
