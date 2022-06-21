@@ -1,0 +1,99 @@
+version: 2
+
+models:
+  - name: dago01
+    description: "dbt model filtering mtcars with higher than 15 MPG"
+    columns:
+      - name: row_names
+        description: "Car names"
+        data_type: varchar
+        tests:
+          - unique
+          - not not_null
+
+      - name: mpg
+        description: "MPG of car"
+        data_type: float
+        tests:
+          - not_null
+      
+      - name: cyl
+        description: "Cylinders of car"
+        data_type: int
+
+      - name: disp
+        description: "Displacement of car"
+        data_type: float
+        
+      - name: hp
+        description: "Horsepower of car"
+        data_type: int
+        tests:
+          - not_null
+      
+      - name: drat
+        description: "Drag coefficient of car"
+        data_type: float
+      
+      - name: wt
+        description: "Weight of car"
+        data_type: float
+      
+      - name: qsec
+        description: "Quarter-seconds of car"
+        data_type: float
+
+      - name: vs
+        description: "Vendor of car"
+        data_type: int
+
+      - name: am
+        description: "Aspiration of car"
+        data_type: int
+
+      - name: gear
+        description: "Gear of car"
+        data_type: int
+        tests:
+          - not_null
+        
+      - name: carb
+        description: "Carburetor of car"
+        data_type: int
+  
+  - name: dagoagggears
+    description: "dbt model aggregating mtcars by gears"
+    columns:
+      - name: gear
+        description: "Gear of car"
+        data_type: int
+        tests:
+          - not_null
+        
+      - name: total
+        description: "Number of cars in this gear"
+        data_type: int
+
+      - name: min_mpg
+        description: "Minimum MPG of cars in this gear"
+        data_type: float
+      
+      - name: max_mpg
+        description: "Maximum MPG of cars in this gear"
+        data_type: float
+
+      - name: avg_mpg
+        description: "Average MPG of cars in this gear"
+        data_type: float
+      
+      - name: min_hp
+        description: "Minimum HP of cars in this gear"
+        data_type: float
+
+      - name: max_hp
+        description: "Maximum HP of cars in this gear"
+        data_type: float
+      
+      - name: avg_hp
+        description: "Average HP of cars in this gear"
+        data_type: float
