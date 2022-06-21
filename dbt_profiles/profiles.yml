@@ -1,4 +1,4 @@
-project_a:
+project_b:
   target: dev-sso-browser
   outputs:
     dev-sso-browser:
