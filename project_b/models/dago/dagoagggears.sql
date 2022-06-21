@@ -8,3 +8,4 @@ SELECT "gear",
     AVG("hp") AS AVG_HP
 FROM {{ ref('dago01') }}
 GROUP BY "gear"
+ORDER BY "gear" ASC
