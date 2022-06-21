@@ -6,5 +6,5 @@ select gear,
     min(hp) as min_hp,
     max(hp) as max_hp,
     avg(hp) as avg_hp
-from { { ref('dago01') } }
+from {{ ref('dago01') }}
 group by gear
