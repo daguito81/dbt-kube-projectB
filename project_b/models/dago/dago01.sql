@@ -3,7 +3,7 @@
 with source_data as (
 
     select *
-    from mtcars_native
+    from "BR_TEC_ARQ_PROYECTO0"."ARQUITECTURA"."mtcars_native"
 
 )
 
