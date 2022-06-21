@@ -4,7 +4,7 @@ models:
   - name: dago01
     description: "dbt model filtering mtcars with higher than 15 MPG"
     columns:
-      - name: row_names
+      - name: "row_names"
         description: "Car names"
         data_type: varchar
         tests:
