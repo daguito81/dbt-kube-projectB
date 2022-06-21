@@ -4,67 +4,80 @@ models:
   - name: dago01
     description: "dbt model filtering mtcars with higher than 15 MPG"
     columns:
-      - name: "row_names"
+      - name: row_names
+        quote: true
         description: "Car names"
         data_type: varchar
         tests:
           - unique
           - not_null
 
-      - name: "mpg"
+      - name: mpg
+        quote: true
         description: "MPG of car"
         data_type: float
         tests:
           - not_null
       
-      - name: "cyl"
+      - name: cyl
+        quote: true
         description: "Cylinders of car"
         data_type: int
 
-      - name: "disp"
+      - name: disp
+        quote: true
         description: "Displacement of car"
         data_type: float
         
-      - name: "hp"
+      - name: hp
+        quote: true
         description: "Horsepower of car"
         data_type: int
         tests:
           - not_null
       
-      - name: "drat"
+      - name: drat
+        quote: true
         description: "Drag coefficient of car"
         data_type: float
       
-      - name: "wt"
+      - name: wt
+        quote: true
         description: "Weight of car"
         data_type: float
       
-      - name: "qsec"
+      - name: qsec
+        quote: true
         description: "Quarter-seconds of car"
         data_type: float
 
-      - name: "vs"
+      - name: vs
+        quote: true
         description: "Vendor of car"
         data_type: int
 
-      - name: "am"
+      - name: am
+        quote: true
         description: "Aspiration of car"
         data_type: int
 
-      - name: "gear"
+      - name: gear
+        quote: true
         description: "Gear of car"
         data_type: int
         tests:
           - not_null
         
-      - name: "carb"
+      - name: carb
+        quote: true
         description: "Carburetor of car"
         data_type: int
   
   - name: dagoagggears
     description: "dbt model aggregating mtcars by gears"
     columns:
-      - name: "gear"
+      - name: gear
+        quote: true
         description: "Gear of car"
         data_type: int
         tests:
