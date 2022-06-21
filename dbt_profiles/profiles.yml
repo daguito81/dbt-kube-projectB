@@ -1,4 +1,4 @@
-project_b:
+project_a:
   target: dev-sso-browser
   outputs:
     dev-sso-browser:
@@ -11,3 +11,15 @@ project_b:
       type: snowflake
       user: "{{ env_var('SNOWFLAKE_USER') }}"
       warehouse: "{{ env_var('SNOWFLAKE_WAREHOUSE') }}"
+    
+    dev-password:
+      account: "{{ env_var('SNOWFLAKE_ACCOUNT') }}"
+      database: "{{ env_var('SNOWFLAKE_DATABASE') }}"
+      role: "{{ env_var('SNOWFLAKE_ROLE') }}"
+      schema: "{{ env_var('SNOWFLAKE_SCHEMA') }}"
+      threads: 4
+      type: snowflake
+      user: "{{ env_var('SNOWFLAKE_NATIVE_USER') }}"
+      password: "{{ env_var('SNOWFLAKE_NATIVE_PASSWORD') }}"
+      warehouse: "{{ env_var('SNOWFLAKE_WAREHOUSE') }}"
+
