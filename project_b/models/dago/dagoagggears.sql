@@ -7,4 +7,4 @@ select gear,
     max(hp) as max_hp,
     avg(hp) as avg_hp
 from {{ ref('dago01') }}
-group by gear
+group by "gear"
