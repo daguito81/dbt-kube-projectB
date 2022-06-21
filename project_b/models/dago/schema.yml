@@ -9,62 +9,62 @@ models:
         data_type: varchar
         tests:
           - unique
-          - not not_null
+          - not_null
 
-      - name: mpg
+      - name: "mpg"
         description: "MPG of car"
         data_type: float
         tests:
           - not_null
       
-      - name: cyl
+      - name: "cyl"
         description: "Cylinders of car"
         data_type: int
 
-      - name: disp
+      - name: "disp"
         description: "Displacement of car"
         data_type: float
         
-      - name: hp
+      - name: "hp"
         description: "Horsepower of car"
         data_type: int
         tests:
           - not_null
       
-      - name: drat
+      - name: "drat"
         description: "Drag coefficient of car"
         data_type: float
       
-      - name: wt
+      - name: "wt"
         description: "Weight of car"
         data_type: float
       
-      - name: qsec
+      - name: "qsec"
         description: "Quarter-seconds of car"
         data_type: float
 
-      - name: vs
+      - name: "vs"
         description: "Vendor of car"
         data_type: int
 
-      - name: am
+      - name: "am"
         description: "Aspiration of car"
         data_type: int
 
-      - name: gear
+      - name: "gear"
         description: "Gear of car"
         data_type: int
         tests:
           - not_null
         
-      - name: carb
+      - name: "carb"
         description: "Carburetor of car"
         data_type: int
   
   - name: dagoagggears
     description: "dbt model aggregating mtcars by gears"
     columns:
-      - name: gear
+      - name: "gear"
         description: "Gear of car"
         data_type: int
         tests:
