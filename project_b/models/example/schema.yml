@@ -17,3 +17,12 @@ models:
         description: "The primary key for this table"
         tests:
           - unique
+  
+  - name: my_third_dbt_model_B
+    description: "A starter dbt model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+
