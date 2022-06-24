@@ -107,6 +107,6 @@ models:
         description: "Maximum HP of cars in this gear"
         data_type: float
       
-      - name: avg_hp
+      - name: avg_hp_DAGO
         description: "Average HP of cars in this gear"
         data_type: float
