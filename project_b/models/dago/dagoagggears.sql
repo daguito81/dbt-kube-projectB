@@ -1,5 +1,3 @@
-{{ config(schema='ARQTEST01') }}
-
 SELECT "gear",
     COUNT(*) AS TOTAL,
     MIN("mpg") AS MIN_MPG,
