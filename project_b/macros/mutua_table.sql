@@ -23,7 +23,7 @@
   {% call statement('main') -%}
     {%if old_relation is not none %}
         {% set rel_columns = adapter.get_columns_in_relation(target_relation) %}
-        {{ get_truncate_insert_sql(target_relation, sql, rel_columns) }}
+        {{ get_delete_insert_sql(target_relation, sql, rel_columns) }}
     {% else %}
         {{ get_create_table_as_sql(False, target_relation, sql) }}
     {% endif %}

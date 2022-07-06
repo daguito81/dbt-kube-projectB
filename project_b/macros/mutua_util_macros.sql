@@ -41,3 +41,22 @@
     {{ sql }}
   );
 {%- endmacro %}
+
+{% macro get_delete_insert_sql(target_relation, sql, dest_columns) -%}
+  {#
+    -- Get the SQL for truncating and inserting the results of a select statement into a target relation with known
+    -- columns.
+    --
+    -- Args:
+    --   target_relation: The relation to insert into.
+    --   sql (str): The SQL of the select statement in question, where columns match dest_columns.
+    --   dest_columns (list of dict):
+    --     List of column details for the relation, in the form returned by adapter.get_columns_in_relation().
+  #}
+  delete from {{ target_relation }};
+  {%- set dest_cols_csv = get_quoted_csv(dest_columns | map(attribute="name")) -%}
+  insert into {{ target_relation }} ({{ dest_cols_csv }})
+  (
+    {{ sql }}
+  );
+{%- endmacro %}
