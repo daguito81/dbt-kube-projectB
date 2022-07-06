@@ -1,4 +1,4 @@
-{{ config(materialized='incremental') }}
+{{ config(materialized='mutua_incremental') }}
 
     SELECT *
     FROM "BR_TEC_ARQ_PROYECTO0"."ARQUITECTURA"."mtcars_native"
