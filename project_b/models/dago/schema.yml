@@ -125,6 +125,7 @@ models:
     description: "dbt model aggregating mtcars by gears"
     columns:
       - name: gear
+        quote: true
         description: "Gear of car"
         data_type: int
         tests:
