@@ -1,5 +1,5 @@
 {{ config(
-    materialized = 'table',
+    materialized = 'table'
     -- unique_key = "row_names",
     -- on_schema_change = 'fail',
     -- incremental_strategy = 'delete+insert',
