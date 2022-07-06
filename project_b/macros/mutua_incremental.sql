@@ -1,4 +1,5 @@
 {% materialization mutua_incremental, adapter='snowflake' -%}
+    /* Dago was here */
 
   {% set original_query_tag = set_query_tag() %}
 

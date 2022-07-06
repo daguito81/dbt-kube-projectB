@@ -1,4 +1,5 @@
 {% materialization mutua_table, default %}
+    /* Dago was here */
   {%- set identifier = model['alias'] -%}
   {%- set tmp_identifier = model['name'] + '__dbt_tmp' -%}
   {%- set backup_identifier = model['name'] + '__dbt_backup' -%}
