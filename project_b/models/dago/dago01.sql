@@ -1,5 +1,5 @@
 {{ config(
-    materialized = 'mutua_table',
+    materialized = 'table',
     query_tag = 'dago01',
     transient = true
 
