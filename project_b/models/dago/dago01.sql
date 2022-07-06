@@ -9,8 +9,8 @@
 
     SELECT 
         "row_names" as ROW_NAMES,
-        "mpg" as MPG,
-        "cyl" as CYL,
+        "mpg" * 1000 as MPG,
+        "cyl" * 100 as CYL,
         "disp" as DISP,
         "hp" as HP,
         "drat" as DRAT,
