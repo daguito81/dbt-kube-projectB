@@ -70,7 +70,7 @@
 
   {% elif full_refresh_mode %}
     {% set rel_columns = adapter.get_columns_in_relation(existing_relation) %}
-    {% set build_sql = get_truncate_insert_sql(existing_relation, sql, rel_columns) %}
+    {% set build_sql = mutua_incremental.get_truncate_insert_sql(existing_relation, sql, rel_columns) %}
 
   {% else %}
     {% do run_query(create_table_as(True, tmp_relation, sql)) %}
