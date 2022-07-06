@@ -7,7 +7,7 @@
   {%- set target_relation = api.Relation.create(identifier=identifier,
                                                 schema=schema,
                                                 database=database,
-                                                type='mutua_table') -%}
+                                                type='table') -%}
   
       See ../view/view.sql for more information about this relation.
   */
