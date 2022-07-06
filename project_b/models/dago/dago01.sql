@@ -2,7 +2,7 @@
     materialized = 'mutua_incremental',
     unique_key = 'ROW_NAMES',
     on_schema_change = 'fail',
-    incremental_strategy = 'delete+insert',
+    incremental_strategy = 'merge',
     merge_update_columns = ['mpg', 'cyl']
 
 ) }}
