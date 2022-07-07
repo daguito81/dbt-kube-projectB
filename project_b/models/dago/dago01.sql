@@ -1,5 +1,5 @@
 {{ config(
-    materialized = 'mutua_table',
+    materialized = 'tables',
     query_tag = 'dago01',
     transient = true
 
@@ -7,8 +7,8 @@
 
     SELECT 
         "row_names" as ROW_NAMES,
-        "mpg" * 1000 as MPG,
-        "cyl" * 100 as CYL,
+        "mpg" * 1 as MPG,
+        "cyl" * 1 as CYL,
         "disp" as DISP,
         "hp" as HP,
         "drat" as DRAT,
